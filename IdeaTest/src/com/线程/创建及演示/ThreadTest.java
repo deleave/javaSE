@@ -1,4 +1,4 @@
-package com.线程;
+package com.线程.创建及演示;
 
 /**
  * @ClassName ThreadTest
@@ -13,6 +13,8 @@ package com.线程;
 * 2.重写Thread类的run()方法-->将此线程执行的操作声明在run()中
 * 3.创建Thread类的子类对象
 * 4.通过此对象调用start()
+*
+*
 *
 * 例子：遍历100以内的所有偶数
 * */

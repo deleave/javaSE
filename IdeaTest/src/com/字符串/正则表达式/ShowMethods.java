@@ -1,8 +1,8 @@
-package com.反射;
+package com.字符串.正则表达式;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.util.regex.Pattern;
-import java.util.regex.*;
-import java.lang.reflect.*;
 public class ShowMethods {
     private static String usage=
             "usage:\n"+

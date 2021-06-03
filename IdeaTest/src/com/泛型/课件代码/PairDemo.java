@@ -1,4 +1,4 @@
-package com.泛型;
+package com.泛型.课件代码;
 
 //【pair1\PairDemo.java 】泛型源程序文件
 //泛型类定义中叫类型参数：类型参数       = 类型变量       + 类型限制

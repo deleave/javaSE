@@ -1,4 +1,4 @@
-package com.泛型;
+package com.泛型.课件代码;
 
 //【程序Pair.java】 弱类型的通用类型源程序文件
 public class Pair1

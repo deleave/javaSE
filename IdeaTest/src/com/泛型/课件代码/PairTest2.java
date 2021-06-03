@@ -1,4 +1,5 @@
-package com.泛型;
+package com.泛型.课件代码;
+//类型变量的限定:
 //泛型实例化例子
 //语法：<T extends BoundingType>
 //类型参数：T extends BoundingType
@@ -9,8 +10,9 @@ package com.泛型;
 //        3）	当类型参数T不是BoundingType的同类或子类是都会产生编译错误
 //Extends表示T应该是绑定类型的子类型（subtype）。
 //T的类型实参的取值范围为绑定类型所限制的类型。T的绑定类型可以是类，也可以是接口。
-//一个类型变量或通配符可以有多个限定类型，它们之间是与的关系，例如：T extends Comparable & Serializable。
+//一个类型变量或通配符可以有多个限定类型，它们之间是'与'的关系，例如：T extends Comparable & Serializable。
 // 如果用一个类作为限定，它必须是限定列表中的第一个（这里是Comparable接口类）。
+
 import java.util.*;
 public class PairTest2
 {
@@ -23,6 +25,8 @@ public class PairTest2
                         new GregorianCalendar(1903, Calendar.DECEMBER, 3), // J. von Neumann
                         new GregorianCalendar(1910, Calendar.JUNE, 22), // K. Zuse
                 };
+        //GregorianCalendar 继承与 Calendar
+        //而Calendar 实现了 Comparable接口 所以birthdays可以作为实参传入泛型方法minmax中
         PairDemo<GregorianCalendar> mm = ArrayAlg.minmax(birthdays);
         System.out.println("min = " + mm.getFirst().getTime());
         System.out.println("max = " + mm.getSecond().getTime());

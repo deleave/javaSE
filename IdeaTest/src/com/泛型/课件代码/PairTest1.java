@@ -1,4 +1,5 @@
-package com.泛型;
+package com.泛型.课件代码;
+
 //调用泛型类PairDemo.java
 public class PairTest1
 {

@@ -1,4 +1,4 @@
-package com.泛型;
+package com.泛型.课件代码;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

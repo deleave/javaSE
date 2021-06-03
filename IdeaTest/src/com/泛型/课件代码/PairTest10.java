@@ -1,4 +1,4 @@
-package com.泛型;
+package com.泛型.课件代码;
 //实例化泛型方法
 public class PairTest10{
     public static void main(String[] args) {
@@ -23,3 +23,36 @@ class ArrayA {
         return a[a.length / 2];
     }
 }
+/*
+ArrayA类的泛型方法源程序文件（实际上并不存在）
+
+class ArrayA
+{
+    //泛型方法，注意：类型变量放在修饰符（这里是 public static）的后面，返回类型的前面。
+    //在源程序中，泛型方法是一个完整的方法族。
+    public static <T> T getMiddle(T[] a)
+    {
+        return a[a.length/2];
+    }
+
+      //原始方法，方法名getMiddle (编译器擦除类型的原方法,JVM只能看到这样的方法)
+   public static Object getMiddle(Object[] a)
+   {
+      return a[a.length/2];
+   }
+
+   //实例化方法。方法名为<String>getMiddle、<Student>getMiddle
+   public static String <String>getMiddle(String[] a)
+   {
+      return a[a.length/2];
+   }
+
+   public static Student <Student>getMiddle(Student[] a)
+   {
+      return a[a.length/2];
+   }
+
+}
+
+*/
+

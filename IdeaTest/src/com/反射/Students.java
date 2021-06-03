@@ -1,6 +1,7 @@
 package com.反射;
 
-public class Students {
+@MyAnnotation(value = "hi")
+public class Students extends Person implements Comparable{
     public String phoneNum;
     protected int age;
     char sex;
@@ -16,6 +17,7 @@ public class Students {
         this.sex=sex;
         System.out.println("包内有参构造器");
     }
+    @MyAnnotation(value = "private")
     private Students(String name){
         this.name=name;
         System.out.println("私有有参构造器");
@@ -25,7 +27,7 @@ public class Students {
         this.age=age;
         System.out.println("公有多参数构造器");
     }
-    public String show1(String s){
+    public String show1(String s) throws NullPointerException,ClassNotFoundException{
         System.out.println("调用了：公有的，String参数的show1(): s = " + s);
         this.name=s;
         return toString();
@@ -36,13 +38,24 @@ public class Students {
     void show3(){
         System.out.println("调用了：默认的，无参的show3()");
     }
+
     private String show4(int age){
         System.out.println("调用了，私有的，并且有返回值的，int参数的show4(): age = " + age);
         this.age=age;
         return toString();
     }
+
+    private static void showStatic(){
+        System.out.println("静态方法");
+    }
+
     public String toString(){
         return "phoneNum:"+phoneNum+" "+"age:"+age+" "
                 +"sex:"+sex+" "+"name:"+name;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
